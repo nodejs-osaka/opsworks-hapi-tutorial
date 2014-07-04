@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/nodejs-osaka/opsworks-hapi-tutorial/issues"
   },
-  "homepage": "https://github.com/nodejs-osaka/opsworks-hapi-tutorial"
+  "homepage": "https://github.com/nodejs-osaka/opsworks-hapi-tutorial",
+  "dependencies": {
+    "hapi": "~6.0.2"
+  }
 }
