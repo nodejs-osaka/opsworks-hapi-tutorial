@@ -10,4 +10,18 @@ server.route({
         reply("Hello World");
     }
 });
+server.route({
+    path: "/env",
+    method: "GET",
+    handler: function (req, reply) {
+        reply(process.env);
+    }
+});
+server.route({
+    path: "/host",
+    method: "GET",
+    handler: function (req, reply) {
+        reply(process.env.HOST_NAME);
+    }
+});
 server.start();
