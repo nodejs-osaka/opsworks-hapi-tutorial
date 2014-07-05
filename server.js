@@ -3,7 +3,10 @@
 var Hapi = require("hapi"),
     server = new Hapi.Server('0.0.0.0', 80),
     caterpillar = require("caterpillar"),
-    logger = new caterpillar.Logger();
+    logger = new caterpillar.Logger(),
+    mkdirp = require("mkdirp");
+
+mkdirp.sync("./log");
 
 server.ext('onRequest', function (req, next) {
     logger.log(new Date().toString(), req.path);
