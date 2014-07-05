@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/nodejs-osaka/opsworks-hapi-tutorial",
   "dependencies": {
-    "hapi": "~6.0.2"
+    "hapi": "~6.0.2",
+    "caterpillar": "~2.0.7"
   }
 }
