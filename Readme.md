@@ -55,4 +55,18 @@ https://github.com/martinheidegger/OpsworksNodeAddons
 Step 3
 ------
 
-To continue go to the branch https://github.com/nodejs-osaka/opsworks-hapi-tutorial/tree/step-3
+Logging is not part of Node.js by default but Opsworks already prepares
+a log folder that is available to store log files ```./log/```.
+
+In this step we added the logging system [caterpiller](https://github.com/bevry/caterpillar)
+to the server and set it up to store log entries in the ```./log/server.log``` file.
+
+You can access the log files by logging into your ec2 instance and executing:
+
+```
+$ sudo cat /srv/www/<your-app-name>/current/log/server.log
+```
+
+Step 4
+------
+To continue go to the branch https://github.com/nodejs-osaka/opsworks-hapi-tutorial/tree/step-4
