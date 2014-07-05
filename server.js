@@ -8,7 +8,7 @@ var Hapi = require("hapi"),
     fs = require("fs");
 
 mkdirp.sync("./log");
-logger.pipe(fs.createWriteStream("./log/server.log"));
+logger.pipe(fs.createWriteStream("./log/server.log", {flags: "a"}));
 
 server.ext('onRequest', function (req, next) {
     logger.log(new Date().toString(), req.path);
