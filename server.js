@@ -5,10 +5,11 @@ var Hapi = require("hapi"),
     caterpillar = require("caterpillar"),
     logger = new caterpillar.Logger(),
     mkdirp = require("mkdirp"),
-    fs = require("fs");
+    fs = require("fs"),
+    human = require('caterpillar-human').createHuman();
 
 mkdirp.sync("./log");
-logger.pipe(fs.createWriteStream("./log/server.log", {flags: "a"}));
+logger.pipe(human).pipe(fs.createWriteStream("./log/server.log", {flags: "a"}));
 
 server.ext('onRequest', function (req, next) {
     logger.log(new Date().toString(), req.path);
