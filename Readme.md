@@ -31,11 +31,15 @@ instance's name (important for logging).
 
 After you have installed this branch you should be able to call:
 
-```http://<yourserver>/host```
+```
+http://<yourserver>/host
+```
 
 to show your server's host name, and:
 
-```http://<yourserver>/env```
+```
+http://<yourserver>/env
+```
 
 to list all the environment variables that are available.
 
@@ -64,7 +68,7 @@ to the server and set it up to store log entries in the ```./log/server.log``` f
 You can access the log files by logging into your ec2 instance and executing:
 
 ```
-$ sudo cat /srv/www/<your-app-name>/current/log/server.log
+$ sudo cat /srv/www/<your-app-name>/shared/log/server.log
 ```
 
 Step 4
