@@ -1,6 +1,6 @@
 {
   "name": "opsworks-hapi-tutorial",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Tutorial to setup a hapi instance for opsworks",
   "main": "index.js",
   "scripts": {
